@@ -87,17 +87,22 @@ For milestone 2, I created two tables, one for the user and one for reviews. The
 
 ## Questions
 
-1. What are at least 2 technical issues you encountered with your project? How did you fix them?
+1. What are at least 3 technical issues you encountered with your project milestone? How did you fix them? 
   
-    * One issue I had while working on this project was getting the corresponding movie ID to be displayed in the reviews section.
-      * I went through the documentation provided by John. To fix this problem, I researched the issue and W3Schools.com helped me come up with a solution. The website suggested that I make the input portion of the html form a readonly through this line 'input type="text" name="movie_id" value="{{rand}}" readonly.' This line displays the movie ID that corresponds with the randomly selected movie title.
+    * One issue I had while working on this project was figuring
+      * 
    
-    * I also had difficulties getting the page to keep track of the current user.
-       * To fix this issue I had to make current username a column in my reviews table. I figured this out by going through previous demos and flask documentation provided. StackOverFlow also helped me resolve the problem.
+    * Another issue was
+       * To fix this issue 
+
+    * The third issue was
+       * 
   
-2. How did your experience working on this milestone differ from what you pictured while working through the planning process? What was unexpectedly hard? Was anything unexpectedly easy?
+2. What was the hardest part of the project for you, across all milestones? What is the most useful thing you learned, across all milestones?
     
-    * Working on milestone 2 had some easy portions, such as constructing the forms for logging in / signing up, and some difficult portions such as figuring out how to keep track of the current, logged in user when leaving reviews. When planning for this milestone, I thought the easiest part would be figuring out log in, yet I was quickly proved wrong.
+    * The hardest part of the project across all milestones was figuring out how to 
+    
+    * The most useful thing I learned across all milestones to me was
    
 ## Heroku
 

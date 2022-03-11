@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import './App.css';
 
 function App() {
   const [review, setReview] = useState([]);
-  useEffect(async () => {
-    const reviews = await axios("/getComments");
-    setReview(reviews.data);
-  }, []);
+  useEffect(() => {
+    fetch('/getComments').then(response => response.json()).then(data => {
+      setReview(data);
+    });
+  }, [])
+
   function delete_comment(id) {
     const new_list = review.filter((review) => review.id !== id);
 
@@ -28,7 +29,7 @@ const Ratings = ({ review, onRemove }) => (
     <span> Rating: {review.ratings} </span>
     <span> Comment: {review.comments} </span>
     <button type="button" onClick={() => onRemove(review.id)}>
-      Remove
+      Delete
     </button>
   </li>
 );
