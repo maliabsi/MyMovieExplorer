@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<header>
+    <h1>My Movie Explorer</h1>
+</header>
+
+<body>
+    <h1>{{title}}</h1>
+    <h2>{{tagline}}</h2>
+    <h3>{{genres}}</h3>
+    <img src={{img_url}}>
+    <a href={{wiki_data}}> Click here for Wiki! </a>
+
+    <h1> Leave a comment here: </h1>
+
+    <form method="POST" action="/user_reviews">
+        <label for="movie_id">Movie ID:</label>
+        <input type="text" name="movie_id" value="{{rand}}" readonly />
+        <label for="rating">Rating(out of 10):</label>
+        <input type="text" name="rating" />
+        <label for="comment">Leave a Comment:</label>
+        <input type="text" name="comment" />
+        <input type="submit" value="Submit" />
+    </form>
+    <ol>
+        {% for i in range(num_comments) %}
+        {{comments[i].curr_username}}&emsp;{{comments[i].ratings}}&emsp;{{comments[i].comments}}
+        <br>
+        {% endfor %}
+    </ol>
+    <form method="POST" action="/user_logout">
+        <input type="submit" value="Logout">
+    </form>
+
+    <form method="POST" action="/diff">
+        <input type="submit" value="Edit Comments">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body{
+    background: url("movies.png");
+    font-family: copperplate;
+    text-align: center;
+    color: white;   
+}
+header{
+    font-family: copperplate;
+    text-align: center;
+    color: darkred;
+}
+a{
+    display: block;
+    text-align: center;
+}
+ol{
+    display: block;
+    text-align: center;
+}
+img_url{
+    text-align: center;
+    height: 150px;
+    width: 100px;
+}
