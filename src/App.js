@@ -1,3 +1,4 @@
+/* eslint-disable spaced-comment */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-alert */
 /* eslint-disable camelcase */
@@ -16,11 +17,13 @@ function App() {
     });
   }, []);
 
+  //function is used to delete reviews of the current user on the UI only
   function delete_comment(id) {
     const new_list = review.filter((review) => review.id !== id);
 
     setReview(new_list);
   }
+  //function deletes reviews of the current user from the actual database
   function save_changes(new_reviews) {
     fetch('/save_changes', {
       method: 'POST',
@@ -48,7 +51,6 @@ function List({ review, onDelete }) {
     </ul>
   );
 }
-
 function Ratings({ review, onDelete }) {
   return (
     <li>

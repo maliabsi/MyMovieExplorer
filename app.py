@@ -202,6 +202,7 @@ def saveChanges():
                 id=id,
                 ratings=ratings,
                 movie_id=movie_id,
+                comments=comments,
                 curr_username=curr_user,
             )
         )
