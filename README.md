@@ -89,6 +89,11 @@ In order to dynamically fetch and display the movie data and wikipedia links on 
     * It functions by passing in a movie title and uses its own base_url and parameters to get JSON response.
     * Then, it filters the JSON response so that the requested information can be returned, which in this case is the Wikipedia URL for each movie.
 
+  * delete_comment:
+    * This function is used to delete reviews on the UI only.
+
+  * save_changes:
+
 ## How Login Works
 
 When a user first clicks on the link, he/she is directed to a welcome page which includes two hyperlinks where he/she is expected to either choose to login or signup. Once the user enters a username, the database checks if the username is existing through the login method. If it is not yet in the database, the user is redirected to a signup page, using routing, where the username can be registered. Once the user is successfully logged in, he/she is able to access all of the movie data and is also able to leave a review that includes a rating and comment through the reviews method.
