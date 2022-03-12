@@ -40,6 +40,17 @@ These are the keys needed to run My Movie Explorer:
 * pip3 install psycopg2-binary
 * pip3 install Flask-SQLAlchemy==2.1
 
+## React Setup
+* brew update
+* brew install node
+* pip3 install npm
+* npm install react
+
+## Run Locally (milestone 3)
+* npm ci
+* npm run build
+* python3 app.py
+
 
 ## Heroku Setup
 
@@ -62,7 +73,7 @@ The flask framework made building this web application simple because of its bui
 8. I also imported SQLAlchemy from flask_sqlalchemy in order to make the process simple when working with the database and setting up database models.
 9. I imported flask-login built in classes and methods such as UserMixin, LoginManager, login_required, login_user, logout_user,
     current_user in order to handle logging in / logging out and to keep track of user sessions.
-10. I also had to import useState and useEffect from 'react'
+10. I also had to import useState and useEffect from 'react' in order to allow state variables and the use of side effects in the components.
     
 ## Methods
 
@@ -91,10 +102,10 @@ For milestone 2, I created two tables, one for the user and one for reviews. The
 1. What are at least 3 technical issues you encountered with your project milestone? How did you fix them? 
   
     * One issue I had while working on this project was figuring out how to remove a review from the list of the current user.
-      * In order to fix this issue, I referenced www.robinwieruch.de which wa
+      * In order to fix this issue, I referenced a code snippet found on www.robinwieruch.de.
    
     * Another issue I encountered was that my alert that notifies users when their changes have been saved kept popping up before making any changes / deleting.
-       * To fix this issue, .....
+       * To fix this issue, I included a mapping function within the onClick () => save_changes(review). Without doing this, my alert would pop up whenever the page loaded instead of when the save changes button was clicked.
 
     * The third issue was figuring out how to save the changes to the database when a user edits / deletes his/her comments on the webpage.
        * To fix this solution, I referenced the StackOverflow link that John provided under the "fetch" section.
@@ -109,5 +120,5 @@ For milestone 2, I created two tables, one for the user and one for reviews. The
 
 Once my movie explorer was complete, I used Heroku to deploy my web app to the server and successfully use my API key while keeping it private. Without using Heroku, no one would be able to access my app since it would only be saved on the local server.
 
-### Heroku URL: 
-https://pacific-shelf-05398.herokuapp.com/
+### Heroku URL (milestone 2): 
+https://pacific-shelf-05398.herokuapp.com/ 
