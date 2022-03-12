@@ -90,10 +90,10 @@ In order to dynamically fetch and display the movie data and wikipedia links on 
     * Then, it filters the JSON response so that the requested information can be returned, which in this case is the Wikipedia URL for each movie.
 
   * delete_comment:
-    * This function is used to delete reviews on the UI only.
+    * This function is used to delete reviews of the current user on the UI only.
 
   * save_changes:
-    * This function is used to delete reviews from the actual database.
+    * This function is used to delete reviews of the current user from the actual database.
 
 ## How Login Works
 
