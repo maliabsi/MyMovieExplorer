@@ -89,20 +89,20 @@ For milestone 2, I created two tables, one for the user and one for reviews. The
 
 1. What are at least 3 technical issues you encountered with your project milestone? How did you fix them? 
   
-    * One issue I had while working on this project was figuring
-      * 
+    * One issue I had while working on this project was figuring out how to remove a review from the list of the current user.
+      * In order to fix this issue, I referenced www.robinwieruch.de which wa
    
     * Another issue was
        * To fix this issue 
 
-    * The third issue was
-       * 
+    * The third issue was figuring out how to save the changes to the database when a user edits / deletes his/her comments on the webpage.
+       * To fix this solution, I 
   
 2. What was the hardest part of the project for you, across all milestones? What is the most useful thing you learned, across all milestones?
     
-    * The hardest part of the project across all milestones was figuring out how to 
+    * The hardest part of the project across all milestones was figuring out how to make the users' reviews editable.
     
-    * The most useful thing I learned across all milestones to me was
+    * The most useful thing I learned across all milestones to me was learning how .......
    
 ## Heroku
 

@@ -75,9 +75,10 @@ bp = flask.Blueprint(
 )
 
 # route for serving React page
-@bp.route("/diff", methods=["GET", "POST"])
+@bp.route("/bp_route", methods=["GET", "POST"])
 def index():
-    return flask.render_template("index.html")
+    if flask.request.method == "POST":
+        return flask.render_template("index.html")
 
 
 favMovies = [637649, 546554, 22803]
@@ -182,6 +183,30 @@ def get_comments():
         dict_comments["movie_id"] = c.movie_id
         list_comments.append(dict_comments)
     return flask.jsonify(list_comments)
+
+
+@bp.route("/save_changes", methods=["GET", "POST"])
+def saveChanges():
+    curr_user = current_user.username
+    if flask.request.method == "POST":
+        Reviews.query.filter_by(curr_username=curr_user).delete()
+    db.session.commit()
+    all_comments = flask.request.json
+    for c in all_comments:
+        id = c["id"]
+        ratings = c["ratings"]
+        comments = c["comments"]
+        movie_id = c["movie_id"]
+        db.session.add(
+            Reviews(
+                id=id,
+                ratings=ratings,
+                movie_id=movie_id,
+                curr_username=curr_user,
+            )
+        )
+        db.session.commit()
+    return flask.redirect("/bp_route")
 
 
 app.register_blueprint(bp)
