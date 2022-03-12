@@ -93,6 +93,7 @@ In order to dynamically fetch and display the movie data and wikipedia links on 
     * This function is used to delete reviews on the UI only.
 
   * save_changes:
+    * This function is used to delete reviews from the actual database.
 
 ## How Login Works
 
