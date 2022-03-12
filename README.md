@@ -1,4 +1,4 @@
-# milestone2-mabsi2
+# milestone3-mabsi2
 
 ## Project Description
 
@@ -23,6 +23,7 @@ These are the keys needed to run My Movie Explorer:
 
 ## Setup
 
+* Create account in order to 
 * Create .env file and add unique tmdb_key as: tmdb_key = "users api_key"
 * add database url as: export DATABASE_URL="user's database_url"
 * add secret_key as: SECRET_KEY="user's secret key"
@@ -39,10 +40,10 @@ These are the keys needed to run My Movie Explorer:
 * pip3 install psycopg2-binary
 * pip3 install Flask-SQLAlchemy==2.1
 
+
 ## Heroku Setup
 
 * /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)  # install Homebrew
-
 * brew tap heroku/brew && brew install heroku  # install Heroku CLI
 
 ## Flask Framework
@@ -58,10 +59,10 @@ The flask framework made building this web application simple because of its bui
 5.	I imported operator to effectively fetch the genre data.
 6.	I imported requests and by using specified parameters and the base_url, the library was able to get the request and convert the response to JSON. 
 7.	I had to import load_dotenv and find_dotenv from dotenv in order to locate the .env file then read and make the environment variable accessible.
-
 8. I also imported SQLAlchemy from flask_sqlalchemy in order to make the process simple when working with the database and setting up database models.
 9. I imported flask-login built in classes and methods such as UserMixin, LoginManager, login_required, login_user, logout_user,
     current_user in order to handle logging in / logging out and to keep track of user sessions.
+10. I also had to import useState and useEffect from 'react'
     
 ## Methods
 
@@ -92,17 +93,17 @@ For milestone 2, I created two tables, one for the user and one for reviews. The
     * One issue I had while working on this project was figuring out how to remove a review from the list of the current user.
       * In order to fix this issue, I referenced www.robinwieruch.de which wa
    
-    * Another issue was
-       * To fix this issue 
+    * Another issue I encountered was that my alert that notifies users when their changes have been saved kept popping up before making any changes / deleting.
+       * To fix this issue, .....
 
     * The third issue was figuring out how to save the changes to the database when a user edits / deletes his/her comments on the webpage.
-       * To fix this solution, I 
+       * To fix this solution, I referenced the StackOverflow link that John provided under the "fetch" section.
   
 2. What was the hardest part of the project for you, across all milestones? What is the most useful thing you learned, across all milestones?
     
     * The hardest part of the project across all milestones was figuring out how to make the users' reviews editable.
     
-    * The most useful thing I learned across all milestones to me was learning how .......
+    * The most useful thing I learned across all milestones to me was learning how to create and interact with a database in addition to learning how to dynamically fetch data.
    
 ## Heroku
 
